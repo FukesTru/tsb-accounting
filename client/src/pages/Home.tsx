@@ -187,53 +187,83 @@ export default function Home() {
       />
 
       {/* ── 1. HERO ─────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0B1E33]">
-        {/* Background image */}
+      <section className="relative min-h-screen flex flex-col overflow-hidden">
+        {/* Full-viewport office background photo */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/manus-storage/tsb-hero-bg_173a499d.jpg')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=85')" }}
         />
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0B1E33]/80 via-[#0B1E33]/60 to-[#0B1E33]/90" />
-        {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center pt-24 pb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
-          >
-            {/* Rating badge */}
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
-              <StarRating />
-              <span className="text-white text-sm font-medium">5.0 Google Reviews</span>
-            </div>
+        {/* Dark olive/green tinted overlay — matches reference */}
+        <div className="absolute inset-0" style={{ background: "rgba(30, 45, 20, 0.72)" }} />
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6 max-w-5xl mx-auto" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Accounting &{" "}
-              <span className="relative inline-block text-[#C9A84C]">
-                Fractional CFO
-                <span className="absolute bottom-1 left-0 w-full h-0.5 bg-[#C9A84C]/60" />
-              </span>{" "}
-              Services in Northwest Arkansas
-            </h1>
+        {/* Content — vertically centered, full height */}
+        <div className="relative z-10 flex-1 flex flex-col justify-center pt-28 pb-20">
+          <div className="container mx-auto px-6 lg:px-12 max-w-5xl text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 32 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.85, ease: [0.23, 1, 0.32, 1] }}
+            >
+              {/* Location tagline — left-aligned gold dash + uppercase text */}
+              <div className="flex items-center justify-center gap-3 mb-8">
+                <span className="block w-8 h-0.5 bg-[#C9A84C]" />
+                <span className="text-[#C9A84C] text-xs font-semibold uppercase tracking-[0.2em]">
+                  Lowell, Arkansas — Serving Northwest Arkansas &amp; Beyond
+                </span>
+              </div>
 
-            <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-              Bookkeeping, advisory, and fractional CFO/controller support for growing businesses — local to NWA, available virtually nationwide.
-            </p>
+              {/* Main headline — large serif, white */}
+              <h1
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-8"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                A Different Kind of<br />Accounting Firm
+              </h1>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact" className="btn-gold text-sm px-8 py-4">
-                Free Consultation <ArrowRight className="w-4 h-4" />
-              </Link>
-              <a href="tel:+14796331206" className="btn-outline-gold text-sm px-8 py-4">
-                <Phone className="w-4 h-4" /> (479) 633-1206
-              </a>
-            </div>
-          </motion.div>
+              {/* Subtext — centered, readable */}
+              <p className="text-white/85 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                TSB Accounting Solutions helps small businesses, startups, and growing companies take a more proactive approach to bookkeeping, accounting, and fractional CFO services. Based in Lowell, AR and serving clients throughout Northwest Arkansas and nationwide.
+              </p>
+
+              {/* CTA buttons */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+                <Link href="/contact" className="btn-gold px-8 py-4 text-sm">
+                  Book a Consultation
+                </Link>
+                <a
+                  href="tel:+14796331206"
+                  className="flex items-center gap-2.5 px-8 py-4 border-2 border-white/60 text-white text-sm font-semibold uppercase tracking-widest rounded-sm hover:bg-white/10 transition-all duration-200"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  <Phone className="w-4 h-4" /> (479) 633-1206
+                </a>
+              </div>
+
+              {/* Credential badges row */}
+              <div className="flex flex-wrap items-center justify-center gap-3">
+                {[
+                  "QuickBooks ProAdvisor",
+                  "10+ Years Experience",
+                  "Licensed & Insured",
+                  "Lowell, AR Based",
+                ].map((badge) => (
+                  <div
+                    key={badge}
+                    className="flex items-center gap-2 px-4 py-2 rounded-sm text-white/80 text-xs font-medium tracking-wide"
+                    style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.18)" }}
+                  >
+                    <CheckCircle className="w-3.5 h-3.5 text-[#C9A84C] flex-shrink-0" />
+                    {badge}
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
         </div>
+
         {/* Scroll indicator */}
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
         >

@@ -194,7 +194,9 @@ export default function Home() {
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=85')" }}
         />
         {/* Dark olive/green tinted overlay — matches reference */}
-        <div className="absolute inset-0" style={{ background: "rgba(30, 45, 20, 0.72)" }} />
+        {/* Dark navy overlay — original TSB color scheme */}
+        {/* Navy blue tint — matches site's primary brand color */}
+        <div className="absolute inset-0" style={{ background: "rgba(11, 30, 51, 0.80)" }} />
 
         {/* Content — vertically centered, full height */}
         <div className="relative z-10 flex-1 flex flex-col justify-center pt-28 pb-20">

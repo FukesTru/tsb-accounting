@@ -25,7 +25,7 @@ export default function Footer() {
               Precision financial services for growing businesses in Northwest Arkansas and beyond. Bookkeeping, fractional CFO, and advisory — handled like your own.
             </p>
             <div className="flex flex-wrap gap-2 mb-5">
-              {["Licensed & Insured", "QuickBooks ProAdvisor", "Virtual-Friendly", "NWA Local"].map((chip) => (
+              {["Licensed CPA", "QuickBooks ProAdvisor", "Construction Specialist", "NWA Local"].map((chip) => (
                 <span key={chip} className="text-xs border border-[#C9A84C]/40 text-[#C9A84C]/80 px-2.5 py-1 rounded-sm">
                   {chip}
                 </span>
@@ -46,8 +46,9 @@ export default function Footer() {
             <h4 className="text-white font-semibold text-sm uppercase tracking-widest mb-5 pb-2 border-b border-white/10">Services</h4>
             <ul className="space-y-2.5">
               {[
-                { label: "Accounting & Advisory", href: "/services/accounting-advisory" },
-                { label: "Tax Planning & Strategy", href: "/services/accounting-advisory/tax-planning" },
+               { label: "Accounting & Advisory", href: "/services/accounting-advisory" },
+               { label: "Construction Accounting", href: "/services/construction-accounting" },
+               { label: "Tax Planning & Strategy", href: "/services/accounting-advisory/tax-planning" },
                 { label: "Financial Statements", href: "/services/accounting-advisory/financial-statements" },
                 { label: "Fractional CFO", href: "/services/fractional-cfo-controller/fractional-cfo" },
                 { label: "Fractional Controller", href: "/services/fractional-cfo-controller/fractional-controller" },
@@ -142,4 +143,3 @@ export default function Footer() {
     </footer>
   );
 }
-

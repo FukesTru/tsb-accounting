@@ -245,9 +245,9 @@ export default function Home() {
               <div className="flex flex-wrap items-center justify-center gap-3">
                 {[
                   "QuickBooks ProAdvisor",
-                  "10+ Years Experience",
-                  "Licensed & Insured",
-                  "Lowell, AR Based",
+                  "20+ Years Experience",
+                  "Licensed CPA",
+                  "Construction Specialist",
                 ].map((badge) => (
                   <div
                     key={badge}
@@ -359,15 +359,15 @@ export default function Home() {
               <div className="relative">
                 <img
                   src="/manus-storage/tsb-about-office_090b575f.jpg"
-                  alt="TSB Accounting Solutions office — placeholder, to be replaced with Victoria's photo"
+                  alt="Victoria Harris-Pelletier, CPA — Founder, TSB Accounting Solutions"
                   className="w-full rounded-sm shadow-xl object-cover aspect-[4/3]"
                   loading="lazy"
                 />
                 {/* Floating stat badge */}
                 <div className="absolute -bottom-6 -right-6 bg-[#0B1E33] border-2 border-[#C9A84C] rounded-sm px-6 py-4 shadow-2xl">
-                  <div className="text-[#C9A84C] text-3xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>10+</div>
+                  <div className="text-[#C9A84C] text-3xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>20+</div>
                   <div className="text-white text-xs font-medium uppercase tracking-wider">Years Experience</div>
-                  <div className="text-white/50 text-xs mt-0.5">— confirm with client</div>
+                  <div className="text-white/50 text-xs mt-0.5">Victoria Harris-Pelletier, CPA</div>
                 </div>
               </div>
             </ScrollReveal>
@@ -378,10 +378,10 @@ export default function Home() {
                 Built on <em className="text-[#C9A84C]">Precision</em>,<br />Driven by Your Success
               </h2>
               <p className="text-slate-600 leading-relaxed mb-4">
-                TSB Accounting Solutions was founded by Victoria Harris-Pelletier with a simple but powerful mission: to give small businesses and growing companies access to the same caliber of financial expertise that large corporations take for granted. Based in Lowell, AR, we serve the entire Northwest Arkansas region and work with clients virtually across the country.
+                Victoria Harris-Pelletier, CPA, grew up in the construction business and spent 20+ years in accounting before founding TSB Accounting Solutions. She built this firm around one idea: that business owners — especially contractors — deserve a CPA who actually understands their industry, not just their tax return.
               </p>
               <p className="text-slate-600 leading-relaxed mb-8">
-                We treat every client's finances as if they were our own — with accuracy, transparency, and a genuine commitment to your long-term success. Whether you need clean books, strategic cash flow management, or a fractional CFO to guide your next growth phase, we're the financial partner you've been looking for.
+                Based in Lowell, AR and serving clients across Northwest Arkansas and nationwide, TSB specializes in construction accounting — job costing, real-time project P&L, WIP reporting — alongside bookkeeping, fractional CFO services, and proactive tax strategy for growing businesses. We treat every client's finances as if they were our own.
               </p>
               <Link href="/about" className="inline-flex items-center gap-2 text-[#C9A84C] font-semibold hover:gap-4 transition-all duration-200">
                 Our Full Story <ArrowRight className="w-4 h-4" />
@@ -682,7 +682,7 @@ export default function Home() {
             </Link>
             {/* Trust badges */}
             <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
-              {["Licensed & Insured", "QuickBooks ProAdvisor", "NWA Local", "Virtual-Friendly", "Free Consultation"].map((chip) => (
+              {["Licensed CPA", "QuickBooks ProAdvisor", "NWA Local", "Virtual-Friendly", "Free Consultation"].map((chip) => (
                 <span key={chip} className="flex items-center gap-1.5 text-xs border border-[#C9A84C]/40 text-[#C9A84C]/80 px-3 py-1.5 rounded-full">
                   <CheckCircle className="w-3.5 h-3.5" /> {chip}
                 </span>

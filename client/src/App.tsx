@@ -26,6 +26,7 @@ import BookkeepingPage from "./pages/services/Bookkeeping";
 import TaxPlanning from "./pages/services/TaxPlanning";
 import FinancialStatements from "./pages/services/FinancialStatements";
 import BusinessAdvisory from "./pages/services/BusinessAdvisory";
+import ConstructionAccounting from "./pages/services/ConstructionAccounting";
 import FractionalCFOService from "./pages/services/FractionalCFOService";
 import FractionalController from "./pages/services/FractionalController";
 import MonthlyBookkeeping from "./pages/services/MonthlyBookkeeping";
@@ -52,6 +53,7 @@ function Router() {
       <Route path="/services/accounting-advisory" component={AccountingAdvisory} />
       <Route path="/services/fractional-cfo-controller" component={FractionalCFOPage} />
       <Route path="/services/bookkeeping" component={BookkeepingPage} />
+      <Route path="/services/construction-accounting" component={ConstructionAccounting} />
 
       {/* Accounting & Advisory sub-pages */}
       <Route path="/services/accounting-advisory/tax-planning" component={TaxPlanning} />
@@ -91,4 +93,3 @@ export default function App() {
     </ErrorBoundary>
   );
 }
-

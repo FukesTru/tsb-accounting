@@ -358,8 +358,8 @@ export default function Home() {
             <ScrollReveal direction="left">
               <div className="relative">
                 <img
-                  src="/manus-storage/tsb-about-office_090b575f.jpg"
-                  alt="Victoria Harris-Pelletier, CPA — Founder, TSB Accounting Solutions"
+                  src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&q=85"
+                  alt="CPA reviewing financial statements — TSB Accounting Solutions"
                   className="w-full rounded-sm shadow-xl object-cover aspect-[4/3]"
                   loading="lazy"
                 />

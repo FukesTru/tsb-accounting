@@ -29,7 +29,7 @@ export default function ConstructionBentonville() {
         ogDescription="Job costing, WIP reporting, and contractor tax strategy for Bentonville AR construction businesses. Licensed CPA with 20+ years experience."
         schema={schema}
       />
-      <section className="bg-[#0B1E33] pt-32 pb-16">
+      <section className="relative overflow-hidden bg-[#0B1E33] pt-32 pb-16">
         <div className="container mx-auto px-4 lg:px-8">
           <Breadcrumb items={[{ label: "Services", href: "/services/construction-accounting" }, { label: "Construction Accounting", href: "/services/construction-accounting" }, { label: "Bentonville, AR" }]} />
           <div className="mt-8 max-w-3xl">

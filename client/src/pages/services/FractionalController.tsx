@@ -33,7 +33,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 export default function FractionalController() {
   return (
     <PageLayout>
-      <section className="bg-[#0B1E33] pt-32 pb-16">
+      <section className="relative overflow-hidden bg-[#0B1E33] pt-32 pb-16">
         <div className="container mx-auto px-4 lg:px-8">
           <Breadcrumb items={[{ label: "Services" }, { label: "Fractional CFO & Controller", href: "/services/fractional-cfo-controller" }, { label: "Fractional Controller" }]} />
           <div className="mt-8 max-w-3xl">

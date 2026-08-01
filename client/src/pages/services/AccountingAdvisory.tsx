@@ -36,7 +36,7 @@ export default function AccountingAdvisory() {
   return (
     <PageLayout>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
-      <section className="bg-[#0B1E33] pt-32 pb-16" style={{ backgroundImage: "url('/manus-storage/tsb-services-bg_1464f380.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <section className="relative overflow-hidden bg-[#0B1E33] pt-32 pb-16" style={{ backgroundImage: "url('/manus-storage/tsb-services-bg_1464f380.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div className="absolute inset-0 bg-[#0B1E33]/85" />
         <div className="relative container mx-auto px-4 lg:px-8">
           <Breadcrumb items={[{ label: "Services", href: "/" }, { label: "Accounting & Advisory" }]} />

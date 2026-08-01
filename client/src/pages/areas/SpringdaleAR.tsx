@@ -55,7 +55,7 @@ export default function SpringdaleAR() {
       />
 
       {/* Hero */}
-      <section className="bg-[#0B1E33] pt-32 pb-16">
+      <section className="relative overflow-hidden bg-[#0B1E33] pt-32 pb-16">
         <div className="container mx-auto px-4 lg:px-8">
           <Breadcrumb items={[{ label: "Service Areas", href: "/areas/northwest-arkansas" }, { label: "Springdale, AR" }]} />
           <div className="mt-8 max-w-3xl">

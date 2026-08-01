@@ -29,10 +29,14 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+    <!--
+      Umami analytics was hard-coded to the VITE_ANALYTICS_ENDPOINT and
+      VITE_ANALYTICS_WEBSITE_ID placeholders, which are not defined. Vite leaves
+      unknown placeholders verbatim, so the tag shipped a literal placeholder
+      URL and failed on every page load. Re-add with real values when set up:
+      <script defer src="https://<your-umami-host>/script.js"
+              data-website-id="<id>"></script>
+    -->
   </body>
 
 </html>

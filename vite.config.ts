@@ -150,7 +150,19 @@ function vitePluginManusDebugCollector(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
+// The Manus preview/debug plugins inline ~367 kB (~106 kB gzipped) of editor
+// instrumentation into index.html. That is useful in the Manus preview (which
+// runs the dev server) but is dead weight for real visitors, so it is excluded
+// from production builds. Set KEEP_MANUS_RUNTIME=1 to force it back on.
+const isProdBuild = process.env.NODE_ENV === "production" || process.argv.includes("build");
+const keepManusRuntime = process.env.KEEP_MANUS_RUNTIME === "1" || !isProdBuild;
+
+const plugins = [
+  react(),
+  tailwindcss(),
+  jsxLocPlugin(),
+  ...(keepManusRuntime ? [vitePluginManusRuntime(), vitePluginManusDebugCollector()] : []),
+];
 
 export default defineConfig({
   plugins,

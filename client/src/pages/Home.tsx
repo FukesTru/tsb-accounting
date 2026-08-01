@@ -156,7 +156,7 @@ export default function Home() {
         {/* Full-viewport office background photo */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=85')" }}
+          style={{ backgroundImage: "url('/manus-storage/tsb-hero-tsb_9f2c41d0.jpg')" }}
         />
         {/* Dark olive/green tinted overlay — matches reference */}
         {/* Dark navy overlay — original TSB color scheme */}

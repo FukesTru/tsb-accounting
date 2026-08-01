@@ -75,6 +75,15 @@ export default function About() {
               <div className="relative">
                 {/* Founder portrait — editorial finance treatment */}
                 <div className="w-full aspect-[3/4] bg-gradient-to-br from-[#0B1E33] via-[#112840] to-[#0d2238] rounded-sm shadow-2xl overflow-hidden relative">
+                  {/* Office backdrop, tinted so the monogram treatment stays legible */}
+                  <img
+                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=85"
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-[#0B1E33]/85" />
                   {/* Decorative gold grid lines */}
                   <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "linear-gradient(#C9A84C 1px, transparent 1px), linear-gradient(90deg, #C9A84C 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
                   {/* Monogram portrait */}

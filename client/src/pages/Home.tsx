@@ -53,32 +53,6 @@ const serviceAreas = [
   { name: "Virtual / Nationwide", href: "/areas/northwest-arkansas" },
 ];
 
-const testimonials = [
-  {
-    name: "Sarah M.",
-    initials: "SM",
-    source: "Google Review",
-    date: "2024",
-    rating: 5,
-    text: "Victoria completely transformed how I understand my business finances. She's patient, thorough, and genuinely cares about your success. Best decision I made for my small business.",
-  },
-  {
-    name: "James R.",
-    initials: "JR",
-    source: "Google Review",
-    date: "2024",
-    rating: 5,
-    text: "TSB handled our books cleanup from two years of chaos. What seemed impossible was done in weeks. Highly professional and responsive — I can't recommend them enough.",
-  },
-  {
-    name: "Linda K.",
-    initials: "LK",
-    source: "Google Review",
-    date: "2024",
-    rating: 5,
-    text: "Having Victoria as our fractional CFO has been a game-changer. She thinks strategically, communicates clearly, and our cash flow has never been healthier.",
-  },
-];
 
 const faqs = [
   {
@@ -142,12 +116,6 @@ const schemaMarkup = {
 };
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
-function StarRating({ count = 5 }: { count?: number }) {
-  return (
-    <div className="flex items-center gap-0.5">
-      {Array.from({ length: count }).map((_, i) => (
-        <Star key={i} className="w-4 h-4 fill-[#C9A84C] text-[#C9A84C]" />
-      ))}
     </div>
   );
 }
@@ -471,56 +439,6 @@ export default function Home() {
                 ))}
               </div>
             </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 7. TESTIMONIALS ─────────────────────────────────────────────────── */}
-      <section className="bg-[#0B1E33] py-24">
-        <div className="container mx-auto px-4 lg:px-8">
-          <ScrollReveal>
-            <div className="text-center mb-4">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <StarRating />
-                <span className="text-white font-semibold">5.0</span>
-                <span className="text-white/50 text-sm">· Google Reviews</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
-                What Our Clients <em className="not-italic text-[#C9A84C]">Say</em>
-              </h2>
-              <a
-                href="https://maps.app.goo.gl/AFn1KEQH1HReiKPD7"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#C9A84C] text-sm border border-[#C9A84C]/40 px-4 py-2 rounded-sm hover:bg-[#C9A84C]/10 transition-colors mt-4"
-              >
-                <Star className="w-4 h-4" /> Leave a Google Review
-              </a>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            {testimonials.map((t, i) => (
-              <ScrollReveal key={t.name} delay={i * 0.1}>
-                <div className="bg-white/5 border border-white/10 rounded-sm p-6 hover:bg-white/8 transition-colors">
-                  <div className="flex items-center gap-0.5 mb-4">
-                    {Array.from({ length: t.rating }).map((_, j) => (
-                      <Star key={j} className="w-4 h-4 fill-[#C9A84C] text-[#C9A84C]" />
-                    ))}
-                  </div>
-                  <p className="text-white/80 text-sm leading-relaxed mb-5 italic">"{t.text}"</p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[#C9A84C] flex items-center justify-center text-[#0B1E33] font-bold text-sm flex-shrink-0">
-                      {t.initials}
-                    </div>
-                    <div>
-                      <div className="text-white font-semibold text-sm">{t.name}</div>
-                      <div className="text-white/40 text-xs">{t.source} · {t.date}</div>
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
           </div>
         </div>
       </section>

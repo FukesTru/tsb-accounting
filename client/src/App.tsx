@@ -39,6 +39,7 @@ import BentonvilleAR from "./pages/areas/BentonvilleAR";
 import RogersAR from "./pages/areas/RogersAR";
 import FayettevilleAR from "./pages/areas/FayettevilleAR";
 import SpringdaleAR from "./pages/areas/SpringdaleAR";
+import BellaVistaAR from "./pages/areas/BellaVistaAR";
 import ConstructionLowell from "./pages/services/construction/ConstructionLowell";
 import ConstructionBentonville from "./pages/services/construction/ConstructionBentonville";
 import ConstructionRogers from "./pages/services/construction/ConstructionRogers";
@@ -59,8 +60,9 @@ function ScrollToTop() {
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
-    <Switch>
+    <>
       <ScrollToTop />
+      <Switch>
       {/* Core */}
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
@@ -95,6 +97,7 @@ function Router() {
       <Route path="/areas/rogers-ar" component={RogersAR} />
       <Route path="/areas/fayetteville-ar" component={FayettevilleAR} />
       <Route path="/areas/springdale-ar" component={SpringdaleAR} />
+      <Route path="/areas/bella-vista-ar" component={BellaVistaAR} />
       <Route path="/services/construction-accounting/lowell-ar" component={ConstructionLowell} />
       <Route path="/services/construction-accounting/bentonville-ar" component={ConstructionBentonville} />
       <Route path="/services/construction-accounting/rogers-ar" component={ConstructionRogers} />
@@ -107,7 +110,8 @@ function Router() {
 
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
-    </Switch>
+      </Switch>
+    </>
   );
 }
 

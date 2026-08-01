@@ -2,15 +2,18 @@ import type { Express } from "express";
 import { ENV } from "./env";
 
 export function registerStorageProxy(app: Express) {
-  app.get("/manus-storage/*", async (req, res) => {
+  app.get("/manus-storage/*", async (req, res, next) => {
     const key = (req.params as Record<string, string>)[0];
     if (!key) {
       res.status(400).send("Missing storage key");
       return;
     }
 
+    // When the remote store isn't configured, fall through to the static
+    // handler so assets committed under client/public/manus-storage/ still
+    // resolve. Previously this 500'd and shadowed those files entirely.
     if (!ENV.forgeApiUrl || !ENV.forgeApiKey) {
-      res.status(500).send("Storage proxy not configured");
+      next();
       return;
     }
 

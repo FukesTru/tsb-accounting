@@ -2,11 +2,11 @@
  * TSB Accounting Solutions — Contact Page
  * /contact — Form + Map + Contact Info
  */
-import { useState } from "react";
-import { Phone, Mail, MapPin, Clock, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import Breadcrumb from "@/components/Breadcrumb";
 import ScrollReveal from "@/components/ScrollReveal";
+import LeadConnectorForm from "@/components/LeadConnectorForm";
 import { MapView } from "@/components/Map";
 
 const schemaMarkup = {
@@ -26,34 +26,6 @@ const schemaMarkup = {
 };
 
 export default function Contact() {
-  const [formState, setFormState] = useState({ name: "", phone: "", email: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError("");
-    setLoading(true);
-    try {
-      const data = new FormData(e.target as HTMLFormElement);
-      const res = await fetch("https://formspree.io/f/xpwzgqvb", {
-        method: "POST",
-        body: data,
-        headers: { Accept: "application/json" },
-      });
-      if (res.ok) {
-        setSubmitted(true);
-      } else {
-        setError("Something went wrong. Please call us directly at (479) 633-1206.");
-      }
-    } catch {
-      setError("Network error. Please call us directly at (479) 633-1206.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
     <PageLayout>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
@@ -81,85 +53,19 @@ export default function Contact() {
           <div className="grid auto-rows-fr grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <ScrollReveal direction="left">
-              {submitted ? (
-                <div className="bg-[#0B1E33] rounded-sm p-10 text-center">
-                  <CheckCircle className="w-16 h-16 text-[#C9A84C] mx-auto mb-4" />
-                  <h2 className="text-2xl font-bold text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
-                    Message Received!
-                  </h2>
-                  <p className="text-white/70">
-                    Thank you for reaching out. Victoria will be in touch within one business day. In the meantime, feel free to call us at{" "}
-                    <a href="tel:+14796331206" className="text-[#C9A84C] hover:underline">(479) 633-1206</a>.
-                  </p>
-                </div>
-              ) : (
-                <div>
-                  <h2 className="text-2xl font-bold text-[#0B1E33] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                    Send Us a Message
-                  </h2>
-                    <form onSubmit={handleSubmit} className="space-y-5" name="contact">
-                      {/* Honeypot spam protection */}
-                      <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
-                      <div>
-                      <label className="block text-sm font-medium text-[#0B1E33] mb-1.5">
-                        Full Name <span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        value={formState.name}
-                        onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                        className="w-full border border-slate-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] transition-colors"
-                        placeholder="Your full name"
-                        name="name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-[#0B1E33] mb-1.5">
-                        Phone Number <span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        type="tel"
-                        required
-                        value={formState.phone}
-                        onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
-                        className="w-full border border-slate-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] transition-colors"
-                        placeholder="(479) 000-0000"
-                        name="phone"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-[#0B1E33] mb-1.5">Email Address</label>
-                      <input
-                        type="email"
-                        value={formState.email}
-                        onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                        className="w-full border border-slate-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] transition-colors"
-                        placeholder="you@example.com"
-                        name="email"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-[#0B1E33] mb-1.5">Message</label>
-                      <textarea
-                        rows={5}
-                        value={formState.message}
-                        onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                        className="w-full border border-slate-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] transition-colors resize-none"
-                        placeholder="Tell us about your business and what you need help with..."
-                        name="message"
-                      />
-                    </div>
-                    <button type="submit" disabled={loading} className="btn-gold w-full justify-center py-3.5">
-                      {loading ? "Sending..." : "Send Message"}
-                    </button>
-                    {error && <p className="text-red-500 text-sm text-center">{error}</p>}
-                    <p className="text-xs text-slate-400 text-center">
-                      We respond within one business day. Your information is kept strictly confidential.
-                    </p>
-                  </form>
-                </div>
-              )}
+              <div>
+                <h2 className="text-2xl font-bold text-[#0B1E33] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  Send Us a Message
+                </h2>
+                <LeadConnectorForm
+                  formId="Hkp1qNjcnBasg0990Le0"
+                  formName="Website Form (TSB Acounting Solutions, LLC)"
+                  height={542}
+                />
+                <p className="text-xs text-slate-400 text-center mt-4">
+                  We respond within one business day. Your information is kept strictly confidential.
+                </p>
+              </div>
             </ScrollReveal>
 
             {/* Contact Info + Map */}

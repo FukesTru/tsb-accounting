@@ -44,10 +44,23 @@ import ConstructionBentonville from "./pages/services/construction/ConstructionB
 import ConstructionRogers from "./pages/services/construction/ConstructionRogers";
 import ConstructionFayetteville from "./pages/services/construction/ConstructionFayetteville";
 import ConstructionSpringdale from "./pages/services/construction/ConstructionSpringdale";
+import FileManager from "./pages/admin/FileManager";
+import { useEffect } from "react";
+import { useLocation } from "wouter";
+
+function ScrollToTop() {
+  const [location] = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [location]);
+  return null;
+}
 
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
+      <ScrollToTop />
       {/* Core */}
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
@@ -89,6 +102,9 @@ function Router() {
       <Route path="/services/construction-accounting/springdale-ar" component={ConstructionSpringdale} />
 
       {/* 404 */}
+      {/* Admin */}
+      <Route path="/admin/files" component={FileManager} />
+
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

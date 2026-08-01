@@ -77,7 +77,7 @@ export default function SpringdaleAR() {
       {/* Main Content */}
       <section className="section-light py-20">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid auto-rows-fr grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-8">
               <ScrollReveal>
                 <h2 className="text-3xl font-bold text-[#0B1E33] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -118,7 +118,7 @@ export default function SpringdaleAR() {
                 <h2 className="text-3xl font-bold text-[#0B1E33] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
                   Services We Offer in Springdale
                 </h2>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <ul className="grid auto-rows-fr grid-cols-1 sm:grid-cols-2 gap-3">
                   {[
                     "Construction accounting & job costing",
                     "Monthly bookkeeping & reconciliation",

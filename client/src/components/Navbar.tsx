@@ -153,7 +153,7 @@ export default function Navbar() {
                   }`}
                   onMouseLeave={() => setServicesOpen(false)}
                 >
-                  <div className="grid grid-cols-3 gap-0 p-6">
+                  <div className="grid auto-rows-fr grid-cols-3 gap-0 p-6">
                     {services.map((cat) => (
                       <div key={cat.category} className="px-4 border-r border-white/10 last:border-r-0">
                         <Link

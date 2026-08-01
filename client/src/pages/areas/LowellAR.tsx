@@ -42,7 +42,7 @@ export default function LowellAR() {
 
       <section className="section-light py-20">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid auto-rows-fr grid-cols-1 lg:grid-cols-2 gap-16">
             <ScrollReveal>
               <h2 className="text-3xl font-bold text-[#0B1E33] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Serving Lowell Businesses</h2>
               <p className="text-slate-600 leading-relaxed mb-4">Lowell, Arkansas is a growing community in the heart of Northwest Arkansas — and TSB Accounting Solutions is right here with you. We understand the local business landscape, the challenges facing NWA entrepreneurs, and the opportunities that come with operating in one of the fastest-growing regions in the country.</p>
@@ -80,7 +80,7 @@ export default function LowellAR() {
               <h2 className="text-3xl font-bold text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Serving NWA Businesses + Remote Clients Nationwide</h2>
               <p className="text-white/70 max-w-2xl mx-auto">While we're based in Lowell, our services extend across all of Northwest Arkansas and virtually to clients across the United States. Distance is no barrier to great financial service.</p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid auto-rows-fr grid-cols-2 md:grid-cols-4 gap-4">
               {["Lowell, AR", "Bentonville, AR", "Rogers, AR", "Fayetteville, AR", "Springdale, AR", "Northwest Arkansas", "Virtual / Remote", "Nationwide"].map((area) => (
                 <div key={area} className="bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-center text-white/70 text-sm">{area}</div>
               ))}

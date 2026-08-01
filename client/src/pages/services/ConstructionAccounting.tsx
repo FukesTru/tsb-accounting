@@ -90,7 +90,7 @@ export default function ConstructionAccounting() {
       <section className="section-light py-24">
         <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
           <ScrollReveal>
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid auto-rows-fr lg:grid-cols-2 gap-16 items-center">
               <div>
                 <p className="text-[#C9A84C] text-sm font-semibold uppercase tracking-widest mb-3">Why It Matters</p>
                 <h2 className="text-3xl md:text-4xl font-bold text-[#0B1E33] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -144,9 +144,9 @@ export default function ConstructionAccounting() {
               </h2>
             </div>
           </ScrollReveal>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid auto-rows-fr md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((b, i) => (
-              <ScrollReveal key={b.title} delay={i * 0.08}>
+              <ScrollReveal key={b.title} delay={Math.min(i * 0.08, 0.15)}>
                 <div className="bg-white p-8 rounded-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300 h-full">
                   <div className="w-12 h-12 bg-[#0B1E33] rounded-sm flex items-center justify-center mb-5">
                     <b.icon className="w-6 h-6 text-[#C9A84C]" />
@@ -170,7 +170,7 @@ export default function ConstructionAccounting() {
                 Built for Every Type of Contractor
               </h2>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid auto-rows-fr sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {whoWeServe.map((type) => (
                 <div key={type} className="flex items-center gap-3 p-4 bg-[#f7f5f0] rounded-sm">
                   <HardHat className="w-5 h-5 text-[#C9A84C] flex-shrink-0" />

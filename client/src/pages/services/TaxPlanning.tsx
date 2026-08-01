@@ -63,7 +63,7 @@ export default function TaxPlanning() {
 
       <section className="section-light py-20">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid auto-rows-fr grid-cols-1 lg:grid-cols-2 gap-16">
             <ScrollReveal>
               <h2 className="text-3xl font-bold text-[#0B1E33] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>What's Included</h2>
               <p className="text-slate-600 leading-relaxed mb-6">Most business owners only think about taxes when it's time to file — and by then, most of the opportunities are gone. TSB's tax planning service works with you throughout the year to identify strategies, optimize your structure, and make sure every legitimate deduction is captured.</p>

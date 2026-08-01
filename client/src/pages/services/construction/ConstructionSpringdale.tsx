@@ -51,7 +51,7 @@ export default function ConstructionSpringdale() {
             <h2 className="text-3xl font-bold text-[#0B1E33] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Construction Accounting for Springdale Subcontractors</h2>
             <p className="text-slate-600 leading-relaxed mb-4">Springdale's subcontractor community is one of the most active in NWA. Framing crews, concrete subs, HVAC and plumbing outfits, and electrical contractors are all working across the corridor — often on multiple jobs simultaneously, with retainage held, draws pending, and bonding requirements to meet. Standard bookkeeping doesn't give you the visibility you need to manage that complexity.</p>
             <p className="text-slate-600 leading-relaxed mb-6">Victoria Harris-Pelletier, CPA, grew up in the construction business. She structures your QuickBooks around your jobs — tracking labor, materials, and subcontractor costs per project — so that job-level P&L is visible in real time. For bonded subcontractors, she also prepares the WIP schedules and reviewed financials your surety requires. Monthly reviews keep you current. Year-round tax strategy keeps more of what you earn.</p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+            <ul className="grid auto-rows-fr grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
               {["Job costing & real-time project P&L", "WIP schedules for bonding & banking", "QuickBooks setup & cleanup", "Monthly bookkeeping & reconciliation", "Contractor tax strategy", "Cash flow forecasting"].map(i => (
                 <li key={i} className="flex items-start gap-2.5 text-slate-700 text-sm"><CheckCircle className="w-4 h-4 text-[#C9A84C] flex-shrink-0 mt-0.5" />{i}</li>
               ))}

@@ -70,7 +70,7 @@ export default function About() {
       {/* Bio Section */}
       <section className="section-light py-24">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="grid auto-rows-fr grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <ScrollReveal direction="left">
               <div className="relative">
                 {/* Founder portrait — editorial finance treatment */}
@@ -154,9 +154,9 @@ export default function About() {
               </h2>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid auto-rows-fr grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((v, i) => (
-              <ScrollReveal key={v.title} delay={i * 0.1}>
+              <ScrollReveal key={v.title} delay={Math.min(i * 0.1, 0.15)}>
                 <div className="text-center">
                   <div className="w-12 h-0.5 bg-[#C9A84C] mx-auto mb-4" />
                   <h3 className="text-white font-bold mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{v.title}</h3>

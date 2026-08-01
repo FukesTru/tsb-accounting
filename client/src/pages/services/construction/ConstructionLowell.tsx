@@ -51,7 +51,7 @@ export default function ConstructionLowell() {
             <h2 className="text-3xl font-bold text-[#0B1E33] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Why Lowell Contractors Choose TSB</h2>
             <p className="text-slate-600 leading-relaxed mb-4">Lowell sits at the center of the NWA construction corridor. Contractors here are working on residential developments off Goad Springs Road, commercial projects along the I-49 frontage, and subcontract work for the major GCs operating across Benton and Washington counties. The common thread: you're bidding work 12-18 months out while waiting to find out if the last job made money.</p>
             <p className="text-slate-600 leading-relaxed mb-6">Victoria Harris-Pelletier, CPA, grew up in the construction business. She structures your QuickBooks around your jobs — not generic templates — so that job costing, labor tracking, and project P&L are visible in real time. Monthly reviews keep you current. Year-round tax strategy keeps more of what you earn.</p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+            <ul className="grid auto-rows-fr grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
               {["Job costing & real-time project P&L", "WIP schedules for bonding & banking", "QuickBooks setup & cleanup", "Monthly bookkeeping & reconciliation", "Contractor tax strategy", "Cash flow forecasting"].map(i => (
                 <li key={i} className="flex items-start gap-2.5 text-slate-700 text-sm"><CheckCircle className="w-4 h-4 text-[#C9A84C] flex-shrink-0 mt-0.5" />{i}</li>
               ))}

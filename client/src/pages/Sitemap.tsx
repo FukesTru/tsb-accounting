@@ -31,6 +31,7 @@ const sitemapData = [
     { label: "Northwest Arkansas", href: "/areas/northwest-arkansas" },
     { label: "Bentonville, AR", href: "/areas/bentonville-ar" },
     { label: "Rogers, AR", href: "/areas/rogers-ar" },
+    { label: "Bella Vista, AR", href: "/areas/bella-vista-ar" },
   ]},
 ];
 
@@ -46,7 +47,7 @@ export default function Sitemap() {
       </section>
       <section className="section-light py-16">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid auto-rows-fr grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {sitemapData.map((group) => (
               <div key={group.section}>
                 <h2 className="text-[#0B1E33] font-bold text-lg mb-4 pb-2 border-b border-slate-200" style={{ fontFamily: "'Playfair Display', serif" }}>

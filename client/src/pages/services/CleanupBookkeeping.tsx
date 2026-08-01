@@ -48,7 +48,7 @@ export default function CleanupBookkeeping() {
       </section>
       <section className="section-light py-20">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid auto-rows-fr grid-cols-1 lg:grid-cols-2 gap-16">
             <ScrollReveal>
               <h2 className="text-3xl font-bold text-[#0B1E33] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>What's Included</h2>
               <p className="text-slate-600 leading-relaxed mb-6">Whether your books haven't been touched in months or you've never had proper bookkeeping at all, we'll get everything cleaned up, reconciled, and tax-ready. No judgment — just results.</p>

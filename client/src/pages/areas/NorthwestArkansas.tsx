@@ -37,12 +37,12 @@ export default function NorthwestArkansas() {
 
       <section className="section-light py-20">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid auto-rows-fr grid-cols-1 lg:grid-cols-2 gap-16">
             <ScrollReveal>
               <h2 className="text-3xl font-bold text-[#0B1E33] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Serving All of Northwest Arkansas</h2>
               <p className="text-slate-600 leading-relaxed mb-4">Northwest Arkansas is one of the fastest-growing regions in the United States — and the businesses here deserve financial services that match that momentum. TSB Accounting Solutions is based in Lowell and serves clients across the entire NWA corridor, from Bentonville's corporate hub to Fayetteville's startup scene.</p>
               <p className="text-slate-600 leading-relaxed mb-6">We also work with clients virtually across the United States. Whether you're a NWA local or a remote client anywhere in the country, you get the same precision, care, and expertise.</p>
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid auto-rows-fr grid-cols-2 gap-2">
                 {cities.map((city) => (
                   <div key={city} className="flex items-center gap-2 text-slate-700 text-sm"><MapPin className="w-3.5 h-3.5 text-[#C9A84C]" />{city}, AR</div>
                 ))}

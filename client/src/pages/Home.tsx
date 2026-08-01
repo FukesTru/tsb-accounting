@@ -48,8 +48,9 @@ const serviceAreas = [
   { name: "Lowell, AR", href: "/areas/lowell-ar", primary: true },
   { name: "Bentonville, AR", href: "/areas/bentonville-ar" },
   { name: "Rogers, AR", href: "/areas/rogers-ar" },
-  { name: "Fayetteville, AR", href: "/areas/northwest-arkansas" },
-  { name: "Springdale, AR", href: "/areas/northwest-arkansas" },
+  { name: "Fayetteville, AR", href: "/areas/fayetteville-ar" },
+  { name: "Springdale, AR", href: "/areas/springdale-ar" },
+  { name: "Bella Vista, AR", href: "/areas/bella-vista-ar" },
   { name: "Virtual / Nationwide", href: "/areas/northwest-arkansas" },
 ];
 
@@ -252,9 +253,9 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid auto-rows-fr grid-cols-1 md:grid-cols-3 gap-8">
             {serviceCards.map((card, i) => (
-              <ScrollReveal key={card.title} delay={i * 0.1}>
+              <ScrollReveal key={card.title} delay={Math.min(i * 0.1, 0.15)}>
                 <div className="bg-white rounded-sm shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-slate-100">
                   <div className="relative overflow-hidden h-52">
                     <img
@@ -318,7 +319,7 @@ export default function Home() {
       {/* ── 4. OUR STORY ────────────────────────────────────────────────────── */}
       <section className="section-light py-24">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid auto-rows-fr grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal direction="left">
               <div className="relative">
                 <img
@@ -367,9 +368,9 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid auto-rows-fr grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, i) => (
-              <ScrollReveal key={step.num} delay={i * 0.1}>
+              <ScrollReveal key={step.num} delay={Math.min(i * 0.1, 0.15)}>
                 <div className="relative">
                   <div className="text-6xl font-bold text-[#C9A84C]/20 mb-4 leading-none" style={{ fontFamily: "'Playfair Display', serif" }}>
                     {step.num}
@@ -401,40 +402,41 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Primary area */}
-            <ScrollReveal direction="left" className="lg:col-span-1">
-              <Link href="/areas/lowell-ar" className="block bg-[#0B1E33] rounded-sm p-8 h-full group hover:bg-[#0a0f14] transition-colors">
-                <MapPin className="w-8 h-8 text-[#C9A84C] mb-4" />
+          {/* Primary area — full-width banner treatment above the city grid */}
+          <ScrollReveal>
+            <Link
+              href="/areas/lowell-ar"
+              className="flex flex-col sm:flex-row sm:items-center gap-6 bg-[#0B1E33] rounded-sm p-8 mb-8 group hover:bg-[#0a0f14] transition-colors"
+            >
+              <MapPin className="w-8 h-8 text-[#C9A84C] flex-shrink-0" />
+              <div className="flex-1">
                 <div className="text-[#C9A84C] text-xs font-semibold uppercase tracking-widest mb-2">Primary Location</div>
                 <h3 className="text-2xl font-bold text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Lowell, AR</h3>
-                <p className="text-white/60 text-sm leading-relaxed mb-4">
+                <p className="text-white/60 text-sm leading-relaxed max-w-2xl">
                   Our home base. We serve Lowell businesses with hands-on, personalized financial services and deep knowledge of the local market.
                 </p>
-                <span className="inline-flex items-center gap-1.5 text-[#C9A84C] text-sm font-semibold group-hover:gap-3 transition-all">
-                  Learn More <ArrowRight className="w-4 h-4" />
-                </span>
-              </Link>
-            </ScrollReveal>
-
-            {/* Other areas grid */}
-            <ScrollReveal className="lg:col-span-2">
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 h-full">
-                {serviceAreas.filter(a => !a.primary).map((area, i) => (
-                  <ScrollReveal key={area.name} delay={i * 0.07}>
-                    <Link
-                      href={area.href}
-                      className="block bg-white border border-slate-200 rounded-sm p-5 hover:border-[#C9A84C] hover:shadow-md transition-all duration-200 group"
-                    >
-                      <MapPin className="w-5 h-5 text-[#C9A84C] mb-2" />
-                      <div className="text-[#0B1E33] font-semibold text-sm group-hover:text-[#C9A84C] transition-colors">
-                        {area.name}
-                      </div>
-                    </Link>
-                  </ScrollReveal>
-                ))}
               </div>
-            </ScrollReveal>
+              <span className="inline-flex items-center gap-1.5 text-[#C9A84C] text-sm font-semibold group-hover:gap-3 transition-all flex-shrink-0">
+                Learn More <ArrowRight className="w-4 h-4" />
+              </span>
+            </Link>
+          </ScrollReveal>
+
+          {/* Other areas — clean 3x2, every card the same size */}
+          <div className="grid auto-rows-fr grid-cols-2 sm:grid-cols-3 gap-4">
+            {serviceAreas.filter(a => !a.primary).map((area, i) => (
+              <ScrollReveal key={area.name} delay={Math.min(i * 0.07, 0.15)} className="h-full">
+                <Link
+                  href={area.href}
+                  className="flex flex-col h-full bg-white border border-slate-200 rounded-sm p-5 hover:border-[#C9A84C] hover:shadow-md transition-all duration-200 group"
+                >
+                  <MapPin className="w-5 h-5 text-[#C9A84C] mb-2" />
+                  <div className="text-[#0B1E33] font-semibold text-sm group-hover:text-[#C9A84C] transition-colors">
+                    {area.name}
+                  </div>
+                </Link>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
@@ -513,7 +515,7 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid auto-rows-fr grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
             <ScrollReveal direction="left">
               <div className="space-y-6">
                 <div className="flex items-start gap-4">

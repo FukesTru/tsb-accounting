@@ -51,7 +51,7 @@ export default function ConstructionRogers() {
             <h2 className="text-3xl font-bold text-[#0B1E33] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Construction Accounting for Rogers Contractors</h2>
             <p className="text-slate-600 leading-relaxed mb-4">Rogers has seen sustained commercial and residential growth driven by population migration into NWA. The Pinnacle Hills retail corridor, the expansion of Rogers Heritage High School, and the ongoing residential development in the Beaver Lake area have kept contractors busy for years. But busy doesn't always mean profitable — and that's the problem Victoria solves.</p>
             <p className="text-slate-600 leading-relaxed mb-6">Victoria Harris-Pelletier, CPA, grew up in the construction business. She structures QuickBooks around your jobs so you can see labor cost vs. budget, track subcontractor costs against your bid, and catch overruns before they eat your margin. Monthly reviews keep you current. Year-round tax strategy — including contractor-specific elections like percentage-of-completion accounting and Section 179 — keeps more of what you earn.</p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+            <ul className="grid auto-rows-fr grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
               {["Job costing & real-time project P&L", "WIP schedules for bonding & banking", "QuickBooks setup & cleanup", "Monthly bookkeeping & reconciliation", "Contractor tax strategy", "Cash flow forecasting"].map(i => (
                 <li key={i} className="flex items-start gap-2.5 text-slate-700 text-sm"><CheckCircle className="w-4 h-4 text-[#C9A84C] flex-shrink-0 mt-0.5" />{i}</li>
               ))}

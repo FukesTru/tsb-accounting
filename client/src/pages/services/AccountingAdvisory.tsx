@@ -75,10 +75,18 @@ export default function AccountingAdvisory() {
           <ScrollReveal>
             <h2 className="text-3xl font-bold text-white mb-10 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>What We Handle</h2>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* 6-col track so 2-col cards tile as 3-up; a trailing pair is centered
+              (offset by one track) instead of leaving an empty cell. */}
+          <div className="grid auto-rows-fr grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
             {subServices.map((s, i) => (
-              <ScrollReveal key={s.title} delay={i * 0.08}>
-                <Link href={s.href} className="block bg-white/5 border border-white/10 rounded-sm p-6 hover:border-[#C9A84C]/50 hover:bg-white/8 transition-all group">
+              <ScrollReveal
+                key={s.title}
+                delay={Math.min(i * 0.08, 0.15)}
+                className={`h-full lg:col-span-2${
+                  subServices.length % 3 === 2 && i === subServices.length - 2 ? " lg:col-start-2" : ""
+                }`}
+              >
+                <Link href={s.href} className="flex flex-col h-full bg-white/5 border border-white/10 rounded-sm p-6 hover:border-[#C9A84C]/50 hover:bg-white/8 transition-all group">
                   <h3 className="text-white font-bold mb-2 group-hover:text-[#C9A84C] transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>{s.title}</h3>
                   <p className="text-white/60 text-sm leading-relaxed mb-4">{s.desc}</p>
                   <span className="inline-flex items-center gap-1 text-[#C9A84C] text-sm font-semibold">Learn More <ArrowRight className="w-3.5 h-3.5" /></span>
@@ -95,9 +103,9 @@ export default function AccountingAdvisory() {
           <ScrollReveal>
             <h2 className="text-3xl font-bold text-[#0B1E33] mb-12 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>Our Process</h2>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid auto-rows-fr grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, i) => (
-              <ScrollReveal key={step.num} delay={i * 0.1}>
+              <ScrollReveal key={step.num} delay={Math.min(i * 0.1, 0.15)}>
                 <div>
                   <div className="text-5xl font-bold text-[#C9A84C]/20 mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{step.num}</div>
                   <div className="w-6 h-0.5 bg-[#C9A84C] mb-3" />

@@ -51,7 +51,7 @@ export default function ConstructionBentonville() {
             <h2 className="text-3xl font-bold text-[#0B1E33] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Construction Accounting Built for the Bentonville Market</h2>
             <p className="text-slate-600 leading-relaxed mb-4">Bentonville contractors are often working on high-profile, high-scrutiny projects with tight schedules and demanding owners. Walmart suppliers, corporate campus expansions, and the hospitality boom around the Bike Park all require contractors who can produce clean financials, accurate WIP schedules, and real-time cost reporting. That starts with having your books structured correctly.</p>
             <p className="text-slate-600 leading-relaxed mb-6">Victoria Harris-Pelletier, CPA, specializes in construction accounting for NWA contractors. She sets up your QuickBooks around your jobs, maintains job costing monthly, and gives you the financial reports your lender, surety, and project owners require. The result: you know which Bentonville jobs are making money — and you know it while you can still do something about it.</p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+            <ul className="grid auto-rows-fr grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
               {["Job costing & real-time project P&L", "WIP schedules for bonding & banking", "QuickBooks setup & cleanup", "Monthly bookkeeping & reconciliation", "Contractor tax strategy", "Cash flow forecasting"].map(i => (
                 <li key={i} className="flex items-start gap-2.5 text-slate-700 text-sm"><CheckCircle className="w-4 h-4 text-[#C9A84C] flex-shrink-0 mt-0.5" />{i}</li>
               ))}

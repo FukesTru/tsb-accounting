@@ -26,7 +26,7 @@ export default function RogersAR() {
             <h2 className="text-3xl font-bold text-[#0B1E33] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Serving Rogers Businesses</h2>
             <p className="text-slate-600 leading-relaxed mb-4">Rogers, Arkansas is a vibrant community in the heart of Northwest Arkansas, with a growing business community that deserves top-tier financial services. TSB Accounting Solutions serves Rogers businesses with the same precision and dedication we bring to every client relationship.</p>
             <p className="text-slate-600 leading-relaxed mb-8">Whether you're a Rogers-based retailer, service business, or professional firm, we provide the bookkeeping, accounting, and advisory services that keep your finances solid and your business growing.</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="grid auto-rows-fr grid-cols-1 md:grid-cols-2 gap-3">
               {["Monthly bookkeeping", "Tax planning & strategy", "Financial statement preparation", "Fractional CFO services", "Cleanup & catch-up bookkeeping", "QuickBooks setup & support", "Business advisory", "Virtual / remote service"].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-slate-700 text-sm"><CheckCircle className="w-4 h-4 text-[#C9A84C] flex-shrink-0" />{item}</div>
               ))}

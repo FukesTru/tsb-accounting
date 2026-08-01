@@ -40,10 +40,18 @@ export default function BookkeepingPage() {
       <section className="bg-[#0B1E33] py-20">
         <div className="container mx-auto px-4 lg:px-8">
           <ScrollReveal><h2 className="text-3xl font-bold text-white mb-10 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>Bookkeeping Services</h2></ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* 6-col track so 2-col cards tile as 3-up; a trailing pair is centered
+              (offset by one track) instead of leaving an empty cell. */}
+          <div className="grid auto-rows-fr grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
             {subServices.map((s, i) => (
-              <ScrollReveal key={s.title} delay={i * 0.08}>
-                <Link href={s.href} className="block bg-white/5 border border-white/10 rounded-sm p-6 hover:border-[#C9A84C]/50 transition-all group">
+              <ScrollReveal
+                key={s.title}
+                delay={Math.min(i * 0.08, 0.15)}
+                className={`h-full lg:col-span-2${
+                  subServices.length % 3 === 2 && i === subServices.length - 2 ? " lg:col-start-2" : ""
+                }`}
+              >
+                <Link href={s.href} className="flex flex-col h-full bg-white/5 border border-white/10 rounded-sm p-6 hover:border-[#C9A84C]/50 transition-all group">
                   <h3 className="text-white font-bold mb-2 group-hover:text-[#C9A84C] transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>{s.title}</h3>
                   <p className="text-white/60 text-sm leading-relaxed mb-4">{s.desc}</p>
                   <span className="inline-flex items-center gap-1 text-[#C9A84C] text-sm font-semibold">Learn More <ArrowRight className="w-3.5 h-3.5" /></span>
@@ -57,13 +65,13 @@ export default function BookkeepingPage() {
       <section className="section-light py-20">
         <div className="container mx-auto px-4 lg:px-8">
           <ScrollReveal><h2 className="text-3xl font-bold text-[#0B1E33] mb-10 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>Why Work with a Dedicated Bookkeeper?</h2></ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid auto-rows-fr grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { title: "Save Time", desc: "Stop spending your evenings on receipts and reconciliations. Focus on running your business." },
               { title: "Avoid Costly Errors", desc: "Accurate books prevent tax penalties, missed deductions, and financial surprises." },
               { title: "Make Better Decisions", desc: "Clean, current financials give you the clarity to make confident business decisions." },
             ].map((item, i) => (
-              <ScrollReveal key={item.title} delay={i * 0.1}>
+              <ScrollReveal key={item.title} delay={Math.min(i * 0.1, 0.15)}>
                 <div className="text-center">
                   <div className="w-10 h-0.5 bg-[#C9A84C] mx-auto mb-4" />
                   <h3 className="text-[#0B1E33] font-bold mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>

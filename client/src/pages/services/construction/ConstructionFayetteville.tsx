@@ -51,7 +51,7 @@ export default function ConstructionFayetteville() {
             <h2 className="text-3xl font-bold text-[#0B1E33] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Construction Accounting for Fayetteville Contractors</h2>
             <p className="text-slate-600 leading-relaxed mb-4">Fayetteville contractors are often working on complex, multi-phase projects — U of A campus renovations, student housing developments, and the commercial growth around the Dickson Street and MLK Boulevard corridors. These projects require accurate WIP reporting, tight cost tracking, and the financial statements that lenders and sureties demand.</p>
             <p className="text-slate-600 leading-relaxed mb-6">Victoria Harris-Pelletier, CPA, grew up in the construction business and has spent 20+ years building accounting systems for contractors. She structures your QuickBooks around your jobs — not generic templates — so that job-level profitability is visible in real time. Monthly reviews, WIP schedules, and year-round tax strategy are all part of the engagement.</p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+            <ul className="grid auto-rows-fr grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
               {["Job costing & real-time project P&L", "WIP schedules for bonding & banking", "QuickBooks setup & cleanup", "Monthly bookkeeping & reconciliation", "Contractor tax strategy", "Cash flow forecasting"].map(i => (
                 <li key={i} className="flex items-start gap-2.5 text-slate-700 text-sm"><CheckCircle className="w-4 h-4 text-[#C9A84C] flex-shrink-0 mt-0.5" />{i}</li>
               ))}

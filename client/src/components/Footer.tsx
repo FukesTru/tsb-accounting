@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className="bg-[#0a0f14] text-white/80">
       {/* Main footer grid */}
       <div className="container mx-auto px-4 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid auto-rows-fr grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Col 1: Logo + Blurb + Trust Chips */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4">
@@ -76,6 +76,7 @@ export default function Footer() {
                 { label: "Rogers, AR", href: "/areas/rogers-ar" },
                 { label: "Fayetteville, AR", href: "/areas/fayetteville-ar" },
                 { label: "Springdale, AR", href: "/areas/springdale-ar" },
+                { label: "Bella Vista, AR", href: "/areas/bella-vista-ar" },
                 { label: "Virtual / Nationwide", href: "/contact" },
               ].map((item) => (
                 <li key={item.label}>

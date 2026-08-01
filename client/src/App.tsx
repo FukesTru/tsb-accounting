@@ -37,6 +37,13 @@ import LowellAR from "./pages/areas/LowellAR";
 import NorthwestArkansas from "./pages/areas/NorthwestArkansas";
 import BentonvilleAR from "./pages/areas/BentonvilleAR";
 import RogersAR from "./pages/areas/RogersAR";
+import FayettevilleAR from "./pages/areas/FayettevilleAR";
+import SpringdaleAR from "./pages/areas/SpringdaleAR";
+import ConstructionLowell from "./pages/services/construction/ConstructionLowell";
+import ConstructionBentonville from "./pages/services/construction/ConstructionBentonville";
+import ConstructionRogers from "./pages/services/construction/ConstructionRogers";
+import ConstructionFayetteville from "./pages/services/construction/ConstructionFayetteville";
+import ConstructionSpringdale from "./pages/services/construction/ConstructionSpringdale";
 
 function Router() {
   return (
@@ -73,6 +80,13 @@ function Router() {
       <Route path="/areas/northwest-arkansas" component={NorthwestArkansas} />
       <Route path="/areas/bentonville-ar" component={BentonvilleAR} />
       <Route path="/areas/rogers-ar" component={RogersAR} />
+      <Route path="/areas/fayetteville-ar" component={FayettevilleAR} />
+      <Route path="/areas/springdale-ar" component={SpringdaleAR} />
+      <Route path="/services/construction-accounting/lowell-ar" component={ConstructionLowell} />
+      <Route path="/services/construction-accounting/bentonville-ar" component={ConstructionBentonville} />
+      <Route path="/services/construction-accounting/rogers-ar" component={ConstructionRogers} />
+      <Route path="/services/construction-accounting/fayetteville-ar" component={ConstructionFayetteville} />
+      <Route path="/services/construction-accounting/springdale-ar" component={ConstructionSpringdale} />
 
       {/* 404 */}
       <Route path="/404" component={NotFound} />

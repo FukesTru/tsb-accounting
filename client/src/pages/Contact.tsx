@@ -29,13 +29,29 @@ export default function Contact() {
   const [formState, setFormState] = useState({ name: "", phone: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError("");
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1000));
-    setSubmitted(true);
-    setLoading(false);
+    try {
+      const data = new FormData(e.target as HTMLFormElement);
+      const res = await fetch("https://formspree.io/f/xpwzgqvb", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please call us directly at (479) 633-1206.");
+      }
+    } catch {
+      setError("Network error. Please call us directly at (479) 633-1206.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -81,8 +97,10 @@ export default function Contact() {
                   <h2 className="text-2xl font-bold text-[#0B1E33] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
                     Send Us a Message
                   </h2>
-                  <form onSubmit={handleSubmit} className="space-y-5">
-                    <div>
+                    <form onSubmit={handleSubmit} className="space-y-5" name="contact">
+                      {/* Honeypot spam protection */}
+                      <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
+                      <div>
                       <label className="block text-sm font-medium text-[#0B1E33] mb-1.5">
                         Full Name <span className="text-red-500">*</span>
                       </label>
@@ -93,6 +111,7 @@ export default function Contact() {
                         onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                         className="w-full border border-slate-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] transition-colors"
                         placeholder="Your full name"
+                        name="name"
                       />
                     </div>
                     <div>
@@ -106,6 +125,7 @@ export default function Contact() {
                         onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
                         className="w-full border border-slate-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] transition-colors"
                         placeholder="(479) 000-0000"
+                        name="phone"
                       />
                     </div>
                     <div>
@@ -116,6 +136,7 @@ export default function Contact() {
                         onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                         className="w-full border border-slate-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] transition-colors"
                         placeholder="you@example.com"
+                        name="email"
                       />
                     </div>
                     <div>
@@ -126,11 +147,13 @@ export default function Contact() {
                         onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                         className="w-full border border-slate-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] transition-colors resize-none"
                         placeholder="Tell us about your business and what you need help with..."
+                        name="message"
                       />
                     </div>
                     <button type="submit" disabled={loading} className="btn-gold w-full justify-center py-3.5">
                       {loading ? "Sending..." : "Send Message"}
                     </button>
+                    {error && <p className="text-red-500 text-sm text-center">{error}</p>}
                     <p className="text-xs text-slate-400 text-center">
                       We respond within one business day. Your information is kept strictly confidential.
                     </p>

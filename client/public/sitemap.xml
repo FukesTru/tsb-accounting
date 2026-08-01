@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://tsbaccountingsolutionsllc.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://tsbaccountingsolutionsllc.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
   <url><loc>https://tsbaccountingsolutionsllc.com/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tsbaccountingsolutionsllc.com/contact</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://tsbaccountingsolutionsllc.com/services/accounting-advisory</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tsbaccountingsolutionsllc.com/services/construction-accounting</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tsbaccountingsolutionsllc.com/services/accounting-advisory</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tsbaccountingsolutionsllc.com/services/accounting-advisory/tax-planning</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tsbaccountingsolutionsllc.com/services/accounting-advisory/financial-statements</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tsbaccountingsolutionsllc.com/services/accounting-advisory/business-advisory</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tsbaccountingsolutionsllc.com/services/accounting-advisory/business-advisory</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://tsbaccountingsolutionsllc.com/services/fractional-cfo-controller</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://tsbaccountingsolutionsllc.com/services/fractional-cfo-controller/fractional-cfo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tsbaccountingsolutionsllc.com/services/fractional-cfo-controller/fractional-controller</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tsbaccountingsolutionsllc.com/services/bookkeeping</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tsbaccountingsolutionsllc.com/services/fractional-cfo-controller/fractional-controller</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tsbaccountingsolutionsllc.com/services/bookkeeping</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tsbaccountingsolutionsllc.com/services/bookkeeping/monthly-bookkeeping</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tsbaccountingsolutionsllc.com/services/bookkeeping/cleanup-catch-up</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tsbaccountingsolutionsllc.com/services/bookkeeping/cleanup-catch-up</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tsbaccountingsolutionsllc.com/services/construction-accounting/lowell-ar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tsbaccountingsolutionsllc.com/services/construction-accounting/bentonville-ar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tsbaccountingsolutionsllc.com/services/construction-accounting/rogers-ar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tsbaccountingsolutionsllc.com/services/construction-accounting/fayetteville-ar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tsbaccountingsolutionsllc.com/services/construction-accounting/springdale-ar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tsbaccountingsolutionsllc.com/areas/lowell-ar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tsbaccountingsolutionsllc.com/areas/northwest-arkansas</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tsbaccountingsolutionsllc.com/areas/bentonville-ar</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://tsbaccountingsolutionsllc.com/areas/rogers-ar</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tsbaccountingsolutionsllc.com/areas/fayetteville-ar</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tsbaccountingsolutionsllc.com/areas/springdale-ar</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://tsbaccountingsolutionsllc.com/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://tsbaccountingsolutionsllc.com/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://tsbaccountingsolutionsllc.com/sitemap</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
 </urlset>
-

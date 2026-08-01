@@ -116,10 +116,6 @@ const schemaMarkup = {
 };
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
-    </div>
-  );
-}
-
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
